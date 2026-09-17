@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   MIKYRA LIFE - estilos globales (tema oscuro)
+   ============================================ */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-marca-fondo text-neutral-100 antialiased;
+  }
+
+  ::selection {
+    @apply bg-marca-ambar/30 text-white;
+  }
+
+  /* Scrollbar sutil en tono marca */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0a0a0a;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #262626;
+    border-radius: 8px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #7f1d1d;
+  }
+}
+
+@layer components {
+  /* Contenedor estándar de secciones */
+  .seccion {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Texto con degradado de marca (rojo -> ámbar) */
+  .texto-degradado {
+    @apply bg-gradient-to-r from-marca-brasa via-marca-ambar to-marca-ambar-claro bg-clip-text text-transparent;
+  }
+
+  /* Tarjeta de superficie oscura con borde */
+  .tarjeta {
+    @apply rounded-2xl border border-marca-borde bg-marca-superficie/60 backdrop-blur-sm;
+  }
+}
