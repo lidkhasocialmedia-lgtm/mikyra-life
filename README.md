@@ -3,6 +3,12 @@
 Tienda ecommerce de gafas bloqueadoras de luz roja / infrarroja — nicho biohacking, sueño y ritmo circadiano.
 `mikyra.roadshop.online`
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Flidkhasocialmedia-lgtm%2Fmikyra-life&project-name=mikyra-life&repository-name=mikyra-life)
+
+> **Despliegue en 1 clic:** pulsa el botón, inicia sesión en Vercel (puedes hacerlo con tu cuenta de GitHub) y listo.
+> La app funciona sin ninguna variable de entorno (modo demo). Para activar pagos/BD/email, añade las
+> variables del apartado siguiente en Vercel → Settings → Environment Variables.
+
 ## Stack
 
 | Capa | Servicio | Nota |
