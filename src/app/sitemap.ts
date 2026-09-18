@@ -1,7 +1,8 @@
 import type { MetadataRoute } from 'next'
 import { cargarProductos } from '@/lib/seed'
+import { siteUrl } from '@/lib/site'
 
-const BASE = process.env.NEXT_PUBLIC_URL ?? 'http://localhost:3000'
+const BASE = siteUrl()
 
 /** Sitemap dinámico: estáticos + productos reales de la BD */
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

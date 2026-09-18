@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { siteUrl } from '@/lib/site'
 
 const inter = Inter({
   subsets: ['latin-ext'],
@@ -8,7 +9,7 @@ const inter = Inter({
   variable: '--font-inter',
 })
 
-const URL_BASE = process.env.NEXT_PUBLIC_URL ?? 'http://localhost:3000'
+const URL_BASE = siteUrl()
 
 /**
  * Metadata raíz de MIKYRA LIFE.

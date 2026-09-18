@@ -1,4 +1,5 @@
 import { Resend } from 'resend'
+import { siteUrl } from '@/lib/site'
 import type { ItemCarrito } from '@/types'
 
 /**
@@ -82,7 +83,7 @@ export async function enviarEmailConfirmacion({ to, nombre, numeroPedido, items,
               </div>
 
               <div class="footer">
-                <p>MIKYRA LIFE | ${process.env.NEXT_PUBLIC_URL ?? 'mikyra.roadshop.online'}</p>
+                <p>MIKYRA LIFE | ${siteUrl()}</p>
                 <p>¿Preguntas? Responde a este email</p>
               </div>
             </div>

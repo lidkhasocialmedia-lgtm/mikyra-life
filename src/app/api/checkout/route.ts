@@ -4,6 +4,7 @@ import { getSupabaseAdmin } from '@/lib/supabase'
 import { cargarProductoPorSlug } from '@/lib/seed'
 import { esquemaCheckout } from '@/lib/validation'
 import { calcularEnvio } from '@/lib/utils'
+import { siteUrl } from '@/lib/site'
 import type { ApiResponse } from '@/types'
 
 export const runtime = 'nodejs'
@@ -108,7 +109,7 @@ export async function POST(request: NextRequest) {
     }
 
     const stripe = getStripe()
-    const base = process.env.NEXT_PUBLIC_URL ?? request.nextUrl.origin
+    const base = siteUrl()
 
     const session = await stripe.checkout.sessions.create({
       mode: 'payment',

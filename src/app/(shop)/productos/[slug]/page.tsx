@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { siteUrl } from '@/lib/site'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { Check, RefreshCcw, Ruler, ShieldCheck, Star, Truck } from 'lucide-react'
@@ -11,7 +12,7 @@ import { AddToCart } from '@/components/shop/AddToCart'
 import { Badge } from '@/components/ui/Badge'
 import { ProductCard } from '@/components/shop/ProductCard'
 
-const URL_BASE = process.env.NEXT_PUBLIC_URL ?? 'http://localhost:3000'
+const URL_BASE = siteUrl()
 
 /** Prerenderizar los slugs de seed para que la demo funcione en static */
 export function generateStaticParams() {
